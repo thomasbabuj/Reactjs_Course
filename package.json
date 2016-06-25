@@ -4,6 +4,7 @@
   "description": "Reactjs course by Learncode.academy",
   "main": "index.js",
   "scripts": {
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -23,6 +24,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   }
 }
