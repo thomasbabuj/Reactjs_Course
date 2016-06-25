@@ -9,19 +9,22 @@ export default class Layout extends React.Component {
 	// Props can be injected to all other components
 	constructor() {
 		super();
-		this.state = {title : "Welcome!"}
+		this.state = {title : "Welcome!", footer : "This is my page footer.."}
 	}
 
-	render() {		
-		setInterval(()=>{
-			this.setState({title : "Welcome Thomas !"})
-		},1500)
-		//const title = "Welcome to Reactjs"
+	changeTitle(title) {
+		this.setState({title})
+	}
+
+	changeFooter(footer) {
+		this.setState({footer})
+	}
+
+	render() {	
 		return (
 			<div>				
-				<Header title={this.state.title} />
-				<Header title={"Other title"} />
-				<Footer />
+				<Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />				
+				<Footer changeFooter={this.changeFooter.bind(this)} footer={this.state.footer}/>
 			</div>
 			
 		)
